@@ -6,4 +6,4 @@ app.get("/url", (req, res, next) => {
    });
 app.listen(port,() => {
   console.log(`Server running at port `+port);
-});
+}); 
