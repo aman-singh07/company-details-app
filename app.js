@@ -19,10 +19,8 @@ function getStocksDetails(url){
 
 
 app.get("/stock-details", async (req, res, next) => {
-    //let result = [];
     let url = 'https://api.bseindia.com/BseIndiaAPI/api/GetStkCurrMain/w?flag=Equity&ddlVal1=Index&ddlVal2=S%26P%20BSE%20SENSEX&m=0&pgN=1';//+req.params.id;
     let stockData = await getStocksDetails(url);
-    //result.push();
     res.send(stockData)
 });
 app.listen(port,() => {
