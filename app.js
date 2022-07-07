@@ -18,12 +18,12 @@ function getStocksDetails(url){
  }
 
 
-app.get("/stock-details", async (req, res, next) => {
+app.get("/stocks-watch", async (req, res, next) => {
     //let result = [];
-    let url = 'https://api.bseindia.com/BseIndiaAPI/api/IndexMovers/w';//+req.params.id;
+    let url = 'https://www1.nseindia.com/live_market/dynaContent/live_watch/stock_watch/niftyStockWatch.json';//+req.params.id;
     let stockData = await getStocksDetails(url);
     //result.push();
-    res.send(stockData.Table)
+    res.send(stockData.data)
 });
 app.listen(port,() => {
   console.log(`Server running at port `+port);
