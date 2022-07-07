@@ -18,8 +18,9 @@ function getStocksDetails(url){
  }
 
 
-app.get("/stock-details", async (req, res, next) => {
-    let stockData = await getStocksDetails("https://api.bseindia.com/BseIndiaAPI/api/ComHeader/w?quotetype=EQ&scripcode=500820&seriesid=");
+app.get("/stock-details/:id", async (req, res, next) => {
+    let url = 'https://api.bseindia.com/BseIndiaAPI/api/ComHeader/w?quotetype=EQ&scripcode='+req.params.id;
+    let stockData = await getStocksDetails(url);
     res.send(stockData)
 });
 app.listen(port,() => {
