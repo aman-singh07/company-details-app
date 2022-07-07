@@ -1,5 +1,22 @@
 {
-  "dependencies": {
-    "express": "^4.18.1"
-  }
+  "name": "stocksapp",
+  "version": "1.0.0",
+  "description": "node app ",
+  "main": "app.js",
+  "scripts": {
+  "start": "node app.js"
+},
+  "repository": {
+  "type": "git",
+  "url": ""
+},
+"dependencies": {
+  "express": "^4.18.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+  "url": ""
+},
+  "homepage": ""
 }
