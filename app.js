@@ -19,9 +19,11 @@ function getStocksDetails(url){
 
 
 app.get("/stock-details", async (req, res, next) => {
+    let result = [];
     let url = 'https://api.bseindia.com/BseIndiaAPI/api/ComHeader/w?quotetype=EQ&scripcode=500820';//+req.params.id;
     let stockData = await getStocksDetails(url);
-    res.send(stockData)
+    result.push(stockData);
+    res.send(result)
 });
 app.listen(port,() => {
   console.log(`Server running at port `+port);
