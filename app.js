@@ -25,6 +25,7 @@ app.get("/stocks-watch", async (req, res, next) => {
     //result.push();
     res.send(stockData.data)
 });
+app.use(express.json({limit: '50mb'}));
 app.listen(port,() => {
   console.log(`Server running at port `+port);
 }); 
